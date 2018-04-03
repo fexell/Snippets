@@ -1,3 +1,17 @@
 @mixin paddingDefault {
-  padding: 15px 30px;
+  padding: 20px 40px;
+}
+
+@mixin marginDefault {
+  margin: 10px;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: contents;
+    clear: both;
+    height: 0;
+    line-height: 0;
+  }
 }

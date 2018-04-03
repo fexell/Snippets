@@ -1,2 +1,11 @@
 .def-btn {
-  padding: 15px 30px; }
+  padding: 20px 40px;
+  margin: 10px;
+  display: inline-block;
+  background: #f3f3f3; }
+  .def-btn::after {
+    content: "";
+    display: contents;
+    clear: both;
+    height: 0;
+    line-height: 0; }
