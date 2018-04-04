@@ -1,8 +1,68 @@
-.def-btn {
-  @include paddingDefault;
-  @include marginDefault;
-  @include clearfix;
+button.normBtn,
+a.lnkBtn {
+  @include default;
   
-  display: inline-block;
-  background: #f3f3f3;
+  &.small-caps {
+    font-variant: small-caps;
+  }
+  
+  .size-1 {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100%;
+  }
+  
+  .size-2 {
+    min-width: 200px;
+    max-width: 200px;
+    width: 100%;
+  }
+  
+  .size-3 {
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+button.normBtn,
+a.lnkBtn {
+  
+  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
+  
+  display: block;
+  float: left;
+  
+  color: #{$mainWhite};
+  background-color: #{$mainBlack};
+  
+  text-align: center;
+  
+  cursor: pointer;
+  
+  &.animation-1 {
+    @include btn-a-1;
+  }
+  
+  &.animation-2 {
+    @include btn-a-2;
+  }
+  
+  &.animation-3 {
+    @include btn-a-3;
+  }
+  
+  &.animation-4 {
+    @include btn-a-4;
+  }
+  
+  &.animation-5 {
+    @include btn-a-5;
+  }
+  
+  &:hover {
+    background-color: #{$mainOrange};
+  }
 }

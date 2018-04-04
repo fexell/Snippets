@@ -1,11 +1,221 @@
-.def-btn {
+div.wrapper,
+main.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  max-width: 100%;
+  width: 100%;
+  height: auto; }
+
+div.inner-wrapper,
+main.inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.white-color {
+  color: #FAFAFA; }
+
+.white-bg {
+  background-color: #FAFAFA; }
+
+.black-color {
+  color: #212121; }
+
+.black-bg {
+  background-color: #212121; }
+
+.orange-color {
+  color: #F57C00; }
+
+.orange-bg {
+  background-color: #F57C00; }
+
+button.normBtn,
+a.lnkBtn {
+  font-size: 1rem;
+  font-family: "Helvetica", serif;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
   padding: 20px 40px;
-  margin: 10px;
-  display: inline-block;
-  background: #f3f3f3; }
-  .def-btn::after {
+  margin: 5px;
+  -webkit-transition: all 250ms;
+  -o-transition: all 250ms;
+  transition: all 250ms; }
+  button.normBtn::after,
+  a.lnkBtn::after {
     content: "";
+    display: block;
     display: contents;
     clear: both;
     height: 0;
     line-height: 0; }
+  button.normBtn,
+  a.lnkBtn {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #212121; }
+  button.normBtn:hover,
+  a.lnkBtn:hover {
+    border-color: #F57C00; }
+  button.normBtn.small-caps,
+  a.lnkBtn.small-caps {
+    font-variant: small-caps; }
+  button.normBtn .size-1,
+  a.lnkBtn .size-1 {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100%; }
+  button.normBtn .size-2,
+  a.lnkBtn .size-2 {
+    min-width: 200px;
+    max-width: 200px;
+    width: 100%; }
+  button.normBtn .size-3,
+  a.lnkBtn .size-3 {
+    min-width: 300px;
+    max-width: 300px;
+    width: 100%; }
+
+button.normBtn,
+a.lnkBtn {
+  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
+  display: block;
+  float: left;
+  color: #FAFAFA;
+  background-color: #212121;
+  text-align: center;
+  cursor: pointer; }
+  button.normBtn.animation-1::after,
+  a.lnkBtn.animation-1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -101%;
+    background-color: rgba(250, 250, 250, 0.2);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition: right 250ms;
+    -o-transition: right 250ms;
+    transition: right 250ms; }
+  button.normBtn.animation-1:hover::after,
+  a.lnkBtn.animation-1:hover::after {
+    content: '';
+    right: -40%; }
+  button.normBtn.animation-2::after,
+  a.lnkBtn.animation-2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.2);
+    -webkit-transition: top 250ms;
+    -o-transition: top 250ms;
+    transition: top 250ms; }
+  button.normBtn.animation-2:hover::after,
+  a.lnkBtn.animation-2:hover::after {
+    content: '';
+    top: -50%; }
+  button.normBtn.animation-3::after,
+  a.lnkBtn.animation-3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.2);
+    -webkit-transition: bottom 250ms;
+    -o-transition: bottom 250ms;
+    transition: bottom 250ms; }
+  button.normBtn.animation-3:hover::after,
+  a.lnkBtn.animation-3:hover::after {
+    content: '';
+    bottom: -50%; }
+  button.normBtn.animation-4,
+  a.lnkBtn.animation-4 {
+    z-index: 1; }
+    button.normBtn.animation-4:hover,
+    a.lnkBtn.animation-4:hover {
+      background-color: #212121;
+      -webkit-transition: all 250ms;
+      -o-transition: all 250ms;
+      transition: all 250ms; }
+    button.normBtn.animation-4::after,
+    a.lnkBtn.animation-4::after {
+      content: '';
+      position: absolute;
+      width: 1%;
+      height: 1%;
+      top: 50%;
+      left: 50%;
+      background-color: transparent;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: width 250ms, height 250ms, background-color 250ms;
+      -o-transition: width 250ms, height 250ms, background-color 250ms;
+      transition: width 250ms, height 250ms, background-color 250ms;
+      z-index: -1; }
+    button.normBtn.animation-4:hover::after,
+    a.lnkBtn.animation-4:hover::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #F57C00; }
+  button.normBtn.animation-5,
+  a.lnkBtn.animation-5 {
+    z-index: 1; }
+    button.normBtn.animation-5:hover,
+    a.lnkBtn.animation-5:hover {
+      background-color: #212121;
+      -webkit-transition: all 250ms;
+      -o-transition: all 250ms;
+      transition: all 250ms; }
+    button.normBtn.animation-5::before, button.normBtn.animation-5::after,
+    a.lnkBtn.animation-5::before,
+    a.lnkBtn.animation-5::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      background-color: #F57C00;
+      -webkit-transition: all 500ms;
+      -o-transition: all 500ms;
+      transition: all 500ms;
+      z-index: -1; }
+    button.normBtn.animation-5::before,
+    a.lnkBtn.animation-5::before {
+      left: -100%; }
+    button.normBtn.animation-5::after,
+    a.lnkBtn.animation-5::after {
+      right: -100%; }
+    button.normBtn.animation-5:hover::before, button.normBtn.animation-5:hover::after,
+    a.lnkBtn.animation-5:hover::before,
+    a.lnkBtn.animation-5:hover::after {
+      -webkit-transition: all 250ms;
+      -o-transition: all 250ms;
+      transition: all 250ms; }
+    button.normBtn.animation-5:hover::before,
+    a.lnkBtn.animation-5:hover::before {
+      left: 0; }
+    button.normBtn.animation-5:hover::after,
+    a.lnkBtn.animation-5:hover::after {
+      right: 0; }
+  button.normBtn:hover,
+  a.lnkBtn:hover {
+    background-color: #F57C00; }

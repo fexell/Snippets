@@ -1,14 +1,65 @@
+//
+// 1) DEFAULTS
+
+@mixin settingsDefault {
+  font: {
+    size: 1rem;
+    family: "Helvetica", serif;
+  }
+  
+  text: {
+    decoration: none;
+  }
+  
+  box-sizing: border-box;
+  
+  position: relative;
+  overflow: hidden;
+}
+
 @mixin paddingDefault {
   padding: 20px 40px;
 }
 
 @mixin marginDefault {
-  margin: 10px;
+  margin: 5px;
 }
 
+@mixin borderDefault($color: #212121, $hvrcolor: #F57C00, $width: 2px, $style: solid) {
+  & {
+    border: {
+      width: $width;
+      style: $style;
+      color: $color;
+    }
+  }
+  
+  &:hover {
+    border: {
+      color: $hvrcolor;
+    }
+  }
+}
+
+@mixin transitionDefault {
+  transition: all 250ms;
+}
+
+@mixin default {
+  @include clearfix;
+  @include settingsDefault;
+  @include paddingDefault;
+  @include marginDefault;
+  @include borderDefault;
+  @include transitionDefault;
+}
+
+//
+// 2) CLEARFIX
 @mixin clearfix {
   &::after {
     content: "";
+    display: block;
     display: contents;
     clear: both;
     height: 0;

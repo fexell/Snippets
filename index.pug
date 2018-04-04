@@ -1,6 +1,14 @@
-include head
+extends head
 
 block main
-  a.def-btn(href="#") .btn-lnk
-  
-include foot
+  div.wrapper
+    div.inner-wrapper
+      a.lnkBtn.small-caps.animation-1(href="#") .btn-lnk
+      a.lnkBtn.small-caps.animation-2(href="#") .btn-lnk
+      a.lnkBtn.small-caps.animation-3(href="#") .btn-lnk
+      a.lnkBtn.small-caps.animation-4(href="#") .btn-lnk
+      a.lnkBtn.small-caps.animation-5(href="#") .btn-lnk
+
+      button.normBtn .normBtn
+
+    include foot

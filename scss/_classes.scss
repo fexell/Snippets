@@ -1,0 +1,52 @@
+//
+// 1) GENERAL CLASSES
+div.wrapper,
+main.wrapper {
+  display: flex;
+  overflow: visible;
+  
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+div.inner-wrapper,
+main.inner-wrapper {
+  display: flex;
+  
+  max-width: 1280px;
+  
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+//
+// 2) COLOR CLASSES
+.white {
+  &-color {
+    color: #{$mainWhite};
+  }
+  &-bg {
+    background-color: #{$mainWhite};
+  }
+}
+
+.black {
+  &-color {
+    color: #{$mainBlack};
+  }
+  &-bg {
+    background-color: #{$mainBlack};
+  }
+}
+
+.orange {
+  &-color {
+    color: #{$mainOrange};
+  }
+  &-bg {
+    background-color: #{$mainOrange};
+  }
+}
