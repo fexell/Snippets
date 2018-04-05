@@ -1,0 +1,47 @@
+.inner-wrapper > div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cpb-container {
+  display: none;
+  position: fixed;
+  overflow: visible;
+  bottom: -380px;
+  left: 0;
+  right: 0;
+  width: 50vw;
+  height: 400px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #212121;
+  transition: bottom 500ms;
+}
+
+.cpb-container:target {
+  bottom: 0;
+}
+
+.cpb-inner {
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  background: #FAFAFA;
+}
+
+.close-cpb {
+  position: absolute;
+  display: block;
+  top: 2%;
+  right: 2%;
+  padding: 10px;
+  color: #FAFAFA;
+  background: #212121;
+  text-decoration: none;
+}
+
+.lnkBtn-container, .menu {
+  padding: 20px;
+  background-color: #EEEEEE;
+}

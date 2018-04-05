@@ -1,0 +1,44 @@
+ul.menu-container {
+  display: contents;
+  list-style-type: none;
+  
+  &> li, &> li a {
+    position: relative;
+    display: block;
+    float: left;
+  }
+  
+  &> li {
+    &.animation-3 {
+      @include menu-a-3;
+    }
+    
+    &.animation-4 {
+      @include menu-a-4;
+    }
+  }
+  
+  &> li a {
+    @include linkDefault;
+    
+    color: #{$mainBlack};
+    
+    &:hover {
+      color: #{$mainOrange};
+    }
+    
+    &.animation-1 {
+      /* menu animation 1 */
+      @include menu-a-1;
+    }
+    
+    &.animation-2 {
+      /* menu animation 2 */
+      @include menu-a-2;
+    }
+    
+    &.animation-5 {
+      @include menu-a-5;
+    }
+  }
+}

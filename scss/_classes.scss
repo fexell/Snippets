@@ -3,6 +3,11 @@
 div.wrapper,
 main.wrapper {
   display: flex;
+  
+  flex: {
+    flow: column nowrap;
+  }
+  
   overflow: visible;
   
   max-width: 100%;
@@ -13,13 +18,21 @@ main.wrapper {
 div.inner-wrapper,
 main.inner-wrapper {
   display: flex;
+  flex: {
+    flow: column nowrap;
+  }
   
   max-width: 1280px;
+  width: 1280px;
   
   margin: {
     left: auto;
     right: auto;
   }
+}
+
+.small-caps {
+  font-variant: small-caps;
 }
 
 //

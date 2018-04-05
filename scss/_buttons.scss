@@ -1,10 +1,9 @@
+
+
+/* 1) lnkBtn, normBtn */
 button.normBtn,
 a.lnkBtn {
-  @include default;
-  
-  &.small-caps {
-    font-variant: small-caps;
-  }
+  @include btnDefault;
   
   .size-1 {
     min-width: 100px;
@@ -42,27 +41,47 @@ a.lnkBtn {
   
   cursor: pointer;
   
+  &:hover {
+    background-color: #{$mainOrange};
+  }
+  
   &.animation-1 {
+    /* lnkBtn, normBtn animation 1 */
     @include btn-a-1;
   }
   
   &.animation-2 {
+    /* lnkBtn, normBtn animation 2 */
     @include btn-a-2;
   }
   
   &.animation-3 {
+    /* lnkBtn, normBtn animation 3 */
     @include btn-a-3;
   }
   
   &.animation-4 {
+    /* lnkBtn, normBtn animation 4 */
     @include btn-a-4;
   }
   
   &.animation-5 {
+    /* lnkBtn, normBtn animation 5 */
     @include btn-a-5;
   }
   
-  &:hover {
-    background-color: #{$mainOrange};
+  &.animation-6 {
+    /* lnkBtn, normBtn animation 6 */
+    @include btn-a-6;
+  }
+  
+  &.animation-7 {
+    /* lnkBtn, normBtn animation 7 */
+    @include btn-a-7;
+  }
+  
+  &.animation-8 {
+    /* lnkBtn, normBtn animation 8 */
+    @include btn-a-8;
   }
 }

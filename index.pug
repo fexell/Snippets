@@ -1,14 +1,38 @@
-extends head
+doctype html
+html
+  - var title = "Home";
+  include head
 
-block main
-  div.wrapper
-    div.inner-wrapper
-      a.lnkBtn.small-caps.animation-1(href="#") .btn-lnk
-      a.lnkBtn.small-caps.animation-2(href="#") .btn-lnk
-      a.lnkBtn.small-caps.animation-3(href="#") .btn-lnk
-      a.lnkBtn.small-caps.animation-4(href="#") .btn-lnk
-      a.lnkBtn.small-caps.animation-5(href="#") .btn-lnk
+  include body
+    block main
+      div.wrapper
+        div.inner-wrapper
+          h1(style="text-align: center;")= title
+          div.lnkBtn-container
+            a.lnkBtn.small-caps.animation-1(href="#cpb") .btn-lnk (1)
+            a.lnkBtn.small-caps.animation-2(href="#cpb") .btn-lnk (2)
+            a.lnkBtn.small-caps.animation-3(href="#cpb") .btn-lnk (3)
+            a.lnkBtn.small-caps.animation-4(href="#cpb") .btn-lnk (4)
+            a.lnkBtn.small-caps.animation-5(href="#cpb") .btn-lnk (5)
+            a.lnkBtn.small-caps.animation-6(href="#cpb") .btn-lnk (6)
+            a.lnkBtn.small-caps.animation-7(href="#cpb") .btn-lnk (7)
+            a.lnkBtn.small-caps.animation-8(href="#cpb") .btn-lnk (8)
 
-      button.normBtn .normBtn
+          div.menu
+            ul.menu-container
+              li
+                a.small-caps.animation-1(href="#") Item-1
+              li
+                a.small-caps.animation-2(href="#") Item-2
+              li.animation-3
+                a.small-caps(href="#") Item-3
+              li.animation-4
+                a.small-caps(href="#") Item-4
+              li
+                a.small-caps.animation-5(href="#") Item-5
 
-    include foot
+        .cpb-container#cpb
+          a.close-cpb(href="#") X
+          .cpb-inner
+
+        include foot

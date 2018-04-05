@@ -45,12 +45,19 @@
   transition: all 250ms;
 }
 
-@mixin default {
+@mixin btnDefault {
   @include clearfix;
   @include settingsDefault;
   @include paddingDefault;
   @include marginDefault;
   @include borderDefault;
+  @include transitionDefault;
+}
+
+@mixin linkDefault {
+  @include clearfix;
+  @include settingsDefault;
+  @include paddingDefault;
   @include transitionDefault;
 }
 
