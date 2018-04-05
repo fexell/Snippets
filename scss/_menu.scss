@@ -8,16 +8,6 @@ ul.menu-container {
     float: left;
   }
   
-  &> li {
-    &.animation-3 {
-      @include menu-a-3;
-    }
-    
-    &.animation-4 {
-      @include menu-a-4;
-    }
-  }
-  
   &> li a {
     @include linkDefault;
     
@@ -35,6 +25,14 @@ ul.menu-container {
     &.animation-2 {
       /* menu animation 2 */
       @include menu-a-2;
+    }
+    
+    &.animation-3 {
+      @include menu-a-3;
+    }
+    
+    &.animation-4 {
+      @include menu-a-4;
     }
     
     &.animation-5 {

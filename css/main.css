@@ -22,7 +22,7 @@ main.inner-wrapper {
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   max-width: 1280px;
-  width: 1280px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto; }
 
@@ -373,126 +373,6 @@ ul.menu-container {
     position: relative;
     display: block;
     float: left; }
-  ul.menu-container > li.animation-3::before, ul.menu-container > li.animation-3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 1%;
-    height: 2px;
-    background-color: transparent;
-    -webkit-transition: background-color 250ms 250ms, width 250ms 0ms;
-    -o-transition: background-color 250ms 250ms, width 250ms 0ms;
-    transition: background-color 250ms 250ms, width 250ms 0ms; }
-  ul.menu-container > li.animation-3::after {
-    left: initial;
-    right: 0;
-    bottom: initial;
-    top: 0; }
-  ul.menu-container > li.animation-3:hover::before, ul.menu-container > li.animation-3:hover::after {
-    width: 100%;
-    background-color: #F57C00;
-    -webkit-transition: background-color 250ms 0ms, width 250ms 250ms;
-    -o-transition: background-color 250ms 0ms, width 250ms 250ms;
-    transition: background-color 250ms 0ms, width 250ms 250ms; }
-  ul.menu-container > li.animation-3 > a::before, ul.menu-container > li.animation-3 > a::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: transparent;
-    -webkit-transition: background-color 250ms 250ms, height 250ms 0ms;
-    -o-transition: background-color 250ms 250ms, height 250ms 0ms;
-    transition: background-color 250ms 250ms, height 250ms 0ms; }
-  ul.menu-container > li.animation-3 > a::before {
-    left: 0;
-    top: 0; }
-  ul.menu-container > li.animation-3 > a::after {
-    right: 0;
-    bottom: 0; }
-  ul.menu-container > li.animation-3 > a:hover::before, ul.menu-container > li.animation-3 > a:hover::after {
-    content: '';
-    height: 100%;
-    background-color: #F57C00;
-    -webkit-transition: background-color 250ms 0ms, height 250ms 250ms;
-    -o-transition: background-color 250ms 0ms, height 250ms 250ms;
-    transition: background-color 250ms 0ms, height 250ms 250ms; }
-  ul.menu-container > li.animation-4::before, ul.menu-container > li.animation-4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 1%;
-    height: 2px;
-    background-color: transparent;
-    -webkit-transition: background-color 250ms 250ms, width 250ms 0ms;
-    -o-transition: background-color 250ms 250ms, width 250ms 0ms;
-    transition: background-color 250ms 250ms, width 250ms 0ms; }
-  ul.menu-container > li.animation-4::after {
-    left: initial;
-    right: 0;
-    bottom: initial;
-    top: 0; }
-  ul.menu-container > li.animation-4:hover::before, ul.menu-container > li.animation-4:hover::after {
-    width: 100%;
-    background-color: #F57C00;
-    -webkit-transition: background-color 250ms 0ms, width 250ms 250ms;
-    -o-transition: background-color 250ms 0ms, width 250ms 250ms;
-    transition: background-color 250ms 0ms, width 250ms 250ms; }
-  ul.menu-container > li.animation-4:hover::before {
-    -webkit-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms; }
-  ul.menu-container > li.animation-4::before {
-    -webkit-transition-delay: 750ms;
-    -o-transition-delay: 750ms;
-    transition-delay: 750ms; }
-  ul.menu-container > li.animation-4:hover::after {
-    -webkit-transition-delay: 500ms;
-    -o-transition-delay: 500ms;
-    transition-delay: 500ms; }
-  ul.menu-container > li.animation-4::after {
-    -webkit-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms; }
-  ul.menu-container > li.animation-4 > a::before, ul.menu-container > li.animation-4 > a::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: transparent;
-    -webkit-transition: background-color 250ms 250ms, height 250ms 0ms;
-    -o-transition: background-color 250ms 250ms, height 250ms 0ms;
-    transition: background-color 250ms 250ms, height 250ms 0ms; }
-  ul.menu-container > li.animation-4 > a::before {
-    left: 0;
-    top: 0; }
-  ul.menu-container > li.animation-4 > a::after {
-    right: 0;
-    bottom: 0; }
-  ul.menu-container > li.animation-4 > a:hover::before, ul.menu-container > li.animation-4 > a:hover::after {
-    content: '';
-    height: 100%;
-    background-color: #F57C00;
-    -webkit-transition: background-color 250ms 0ms, height 250ms 250ms;
-    -o-transition: background-color 250ms 0ms, height 250ms 250ms;
-    transition: background-color 250ms 0ms, height 250ms 250ms; }
-  ul.menu-container > li.animation-4 > a:hover::before {
-    -webkit-transition-delay: 750ms;
-    -o-transition-delay: 750ms;
-    transition-delay: 750ms; }
-  ul.menu-container > li.animation-4 > a::before {
-    -webkit-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms; }
-  ul.menu-container > li.animation-4 > a:hover::after {
-    -webkit-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms; }
-  ul.menu-container > li.animation-4 > a::after {
-    -webkit-transition-delay: 500ms;
-    -o-transition-delay: 500ms;
-    transition-delay: 500ms; }
   ul.menu-container > li a {
     font-size: 1rem;
     font-family: "Helvetica", serif;
@@ -558,22 +438,123 @@ ul.menu-container {
         -webkit-transition: background-color 250ms 0ms, width 250ms 250ms;
         -o-transition: background-color 250ms 0ms, width 250ms 250ms;
         transition: background-color 250ms 0ms, width 250ms 250ms; }
-    ul.menu-container > li a.animation-5::before {
+    ul.menu-container > li a.animation-3::before, ul.menu-container > li a.animation-3::after {
       content: '';
       position: absolute;
-      top: 0;
+      width: 0%;
+      height: 2px;
+      background-color: transparent; }
+    ul.menu-container > li a.animation-3::before {
+      content: '';
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+      bottom: 0;
       left: 0;
-      width: 0;
+      -webkit-transition: height 250ms, width 250ms 350ms, border-right-color 250ms 500ms, border-bottom-color 250ms 750ms;
+      -o-transition: height 250ms, width 250ms 350ms, border-right-color 250ms 500ms, border-bottom-color 250ms 750ms;
+      transition: height 250ms, width 250ms 350ms, border-right-color 250ms 500ms, border-bottom-color 250ms 750ms;
+      transition-direction: reverse;
+      z-index: 0; }
+    ul.menu-container > li a.animation-3::after {
+      content: '';
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      top: 0;
+      right: 0;
+      -webkit-transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      -o-transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      transition-direction: reverse;
+      z-index: 2; }
+    ul.menu-container > li a.animation-3:hover::before {
+      content: '';
+      width: 100%;
       height: 100%;
-      background-color: transparent;
-      -webkit-transition: background-color 250ms 250ms, width 250ms 0ms;
-      -o-transition: background-color 250ms 250ms, width 250ms 0ms;
-      transition: background-color 250ms 250ms, width 250ms 0ms; }
-    ul.menu-container > li a.animation-5:hover::before {
+      -webkit-transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      -o-transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      transition-direction: normal;
+      border-bottom-color: #F57C00;
+      border-right-color: #F57C00; }
+    ul.menu-container > li a.animation-3:hover::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      -webkit-transition: width 250ms 250ms, height 250ms 501ms, border-left-color 250ms, border-top-color 250ms;
+      -o-transition: width 250ms 250ms, height 250ms 501ms, border-left-color 250ms, border-top-color 250ms;
+      transition: width 250ms 250ms, height 250ms 501ms, border-left-color 250ms, border-top-color 250ms;
+      transition-direction: normal;
+      border-top-color: #F57C00;
+      border-left-color: #F57C00; }
+    ul.menu-container > li a.animation-4::before, ul.menu-container > li a.animation-4::after {
       content: '';
       position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: transparent; }
+    ul.menu-container > li a.animation-4::before {
+      content: '';
+      border-bottom: 2px solid transparent;
+      border-right: 2px solid transparent;
+      bottom: 0;
+      left: 0;
+      -webkit-transition: height 250ms 750ms, width 250ms 1000ms, border-right-color 250ms 1250ms, border-bottom-color 250ms 1500ms;
+      -o-transition: height 250ms 750ms, width 250ms 1000ms, border-right-color 250ms 1250ms, border-bottom-color 250ms 1500ms;
+      transition: height 250ms 750ms, width 250ms 1000ms, border-right-color 250ms 1250ms, border-bottom-color 250ms 1500ms;
+      transition-direction: reverse;
+      z-index: 0; }
+    ul.menu-container > li a.animation-4::after {
+      content: '';
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      top: 0;
+      right: 0;
+      -webkit-transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      -o-transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+      transition-direction: reverse;
+      z-index: 2; }
+    ul.menu-container > li a.animation-4:hover::before {
+      content: '';
       width: 100%;
-      background-color: rgba(33, 33, 33, 0.2);
-      -webkit-transition: background-color 250ms 0ms, width 250ms 250ms;
-      -o-transition: background-color 250ms 0ms, width 250ms 250ms;
-      transition: background-color 250ms 0ms, width 250ms 250ms; }
+      height: 100%;
+      -webkit-transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      -o-transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+      transition-direction: normal;
+      border-bottom-color: #F57C00;
+      border-right-color: #F57C00; }
+    ul.menu-container > li a.animation-4:hover::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      -webkit-transition: width 250ms 750ms, height 250ms 1001ms, border-left-color 250ms 750ms, border-top-color 250ms 750ms;
+      -o-transition: width 250ms 750ms, height 250ms 1001ms, border-left-color 250ms 750ms, border-top-color 250ms 750ms;
+      transition: width 250ms 750ms, height 250ms 1001ms, border-left-color 250ms 750ms, border-top-color 250ms 750ms;
+      transition-direction: normal;
+      border-top-color: #F57C00;
+      border-left-color: #F57C00; }
+    ul.menu-container > li a.animation-5 {
+      z-index: 0; }
+      ul.menu-container > li a.animation-5:hover {
+        color: #FAFAFA; }
+      ul.menu-container > li a.animation-5::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: transparent;
+        -webkit-transition: background-color 250ms 250ms, width 250ms 0ms;
+        -o-transition: background-color 250ms 250ms, width 250ms 0ms;
+        transition: background-color 250ms 250ms, width 250ms 0ms;
+        z-index: -1; }
+      ul.menu-container > li a.animation-5:hover::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-color: #F57C00;
+        -webkit-transition: background-color 250ms 0ms, width 250ms 250ms;
+        -o-transition: background-color 250ms 0ms, width 250ms 250ms;
+        transition: background-color 250ms 0ms, width 250ms 250ms; }
