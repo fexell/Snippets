@@ -1,6 +1,6 @@
 ul.menu-container {
-  display: contents;
   list-style-type: none;
+  padding: 0;
   
   &> li, &> li a {
     position: relative;
@@ -28,15 +28,183 @@ ul.menu-container {
     }
     
     &.animation-3 {
+      /* menu animation 3 */
       @include menu-a-3;
     }
     
     &.animation-4 {
+      /* menu animation 4 */
       @include menu-a-4;
     }
     
     &.animation-5 {
+      /* menu animation 5 */
       @include menu-a-5;
     }
+    
+    &.animation-6 {
+      /* menu animation 6 */
+      @include menu-a-6;
+    }
   }
+}
+
+button.menu-toggle {
+  cursor: pointer;
+  
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  
+  width: 21px;
+  height: 21px;
+  
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  
+  background-color: transparent;
+  
+  &.animation-1.toggled {
+    &> span.bars {
+      background-color: transparent;
+      &::before {
+        content: '';
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: '';
+        transform: rotate(-45deg);
+      }
+      &::before, &::after {
+        top: 50%;
+        margin-top: -2px;
+      }
+    }
+  }
+  
+  &.animation-2.toggled {
+    &> span.bars {
+      background-color: transparent;
+      transform: rotate(360deg);
+      
+      &::before {
+        content: '';
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: '';
+        transform: rotate(-45deg);
+      }
+      &::before, &::after {
+        top: 50%;
+        margin-top: -2px;
+      }
+    }
+  }
+  
+  &.animation-3.toggled {
+    &> span.bars {
+      
+      background-color: transparent !important;
+      
+      @keyframes fadeInOutMenuIconBefore {
+        0% {
+          opacity: 0;
+        }
+        
+        50% {
+          opacity: 0;
+          top: 50%;
+          margin-top: -2px;
+          transform: rotate(45deg);
+        }
+        
+        75% {
+          opacity: 1;
+          top: 50%;
+          margin-top: -2px;
+          transform: rotate(45deg);
+        }
+        
+        100% {
+          opacity: 1;
+          top: 50%;
+          margin-top: -2px;
+          transform: rotate(45deg);
+        }
+      }
+      
+      @keyframes fadeInOutMenuIconAfter {
+        0% {
+          opacity: 0;
+        }
+        
+        50% {
+          opacity: 0;
+        }
+        
+        75% {
+          opacity: 0;
+          top: 50%;
+          margin-top: -2px;
+          transform: rotate(-45deg);
+        }
+        
+        100% {
+          opacity: 1;
+          top: 50%;
+          margin-top: -2px;
+          transform: rotate(-45deg);
+        }
+      }
+      
+      &::before {
+        content: '';
+        animation: fadeInOutMenuIconBefore 250ms;
+        animation-fill-mode: forwards;
+      }
+      &::after {
+        content: '';
+        top: 50%;
+        opacity: 0;
+        animation: fadeInOutMenuIconAfter 250ms;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  
+  &> span.bars {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #212121;
+    
+    &, &::before, &::after {
+      content: '';
+      transition: all 250ms;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #212121;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #212121;
+    }
+  }
+  
 }

@@ -1,10 +1,38 @@
-.inner-wrapper > div {
+h1, h2, h3, h4, h5, h6, p, div, a {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #607D8B;
+}
+
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  border-top: 4px solid #000;
+}
+
+.inner-wrapper > section {
   margin-top: 5px;
   margin-bottom: 5px;
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  background: #FAFAFA;
+  transition: box-shadow 250ms, border-color 250ms 125ms, all 500ms;
+}
+
+.inner-wrapper > section:hover {
+  border-color: #BDBDBD;
+  box-shadow: 0 10px 10px -8px #9E9E9E;
 }
 
 .cpb-container {
-  display: none;
   position: fixed;
   overflow: visible;
   bottom: -380px;
@@ -24,9 +52,11 @@
 }
 
 .cpb-inner {
+  overflow: scroll;
   width: 100%;
   min-height: 400px;
   height: 100%;
+  padding: 20px;
   background: #FAFAFA;
 }
 
@@ -44,4 +74,18 @@
 .lnkBtn-container, .menu {
   padding: 20px;
   background-color: #EEEEEE;
+}
+
+.hamburger-buttons-container button {
+  margin-right: 20px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  padding-left: 40px;
+  padding-right: 40px;
+  float: left;
+  background: #E0E0E0;
+  border: 0;
 }

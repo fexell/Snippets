@@ -11,7 +11,7 @@ html
       div.wrapper
         div.inner-wrapper
           h1(style="text-align: center;")= title
-          div.lnkBtn-container
+          section.lnkBtn-container#lnkBtn-section
             +blockTitle("Buttons")
             a.lnkBtn.small-caps.animation-1(href="#cpb") .btn-lnk (1)
             a.lnkBtn.small-caps.animation-2(href="#cpb") .btn-lnk (2)
@@ -21,10 +21,11 @@ html
             a.lnkBtn.small-caps.animation-6(href="#cpb") .btn-lnk (6)
             a.lnkBtn.small-caps.animation-7(href="#cpb") .btn-lnk (7)
             a.lnkBtn.small-caps.animation-8(href="#cpb") .btn-lnk (8)
-
-          div.menu
+            a.lnkBtn.small-caps.animation-9(href="#cpb") .btn-lnk (9)
+            
+          section.menu
             +blockTitle("Menu")
-            ul.menu-container
+            ul.menu-container.clearfix
               li
                 a.small-caps.animation-1(href="#") Item-1
               li
@@ -35,9 +36,33 @@ html
                 a.small-caps.animation-4(href="#") Item-4
               li
                 a.small-caps.animation-5(href="#") Item-5
+              li
+                a.small-caps.animation-6(href="#") Item-6
+                
+            hr.clearfix
+            
+            div.hamburger-buttons-container
+              button.menu-toggle.animation-1(onclick=";this.classList.toggle('toggled');")
+                span.bars
+              button.menu-toggle.animation-2(onclick=";this.classList.toggle('toggled');")
+                span.bars
+              button.menu-toggle.animation-3(onclick=";this.classList.toggle('toggled');")
+                span.bars
+                
+          section.messageBoxes
+            +blockTitle("Message Boxes")
+            a(href="#box-1") Box-1
+                
 
         .cpb-container#cpb
           a.close-cpb(href="#") X
           .cpb-inner
+          
+        .message-box#box-1(data-action="close" href="#close")
+          a(href="#").close X
+          .inner-container
+            a(href="#").close X
+            h1 Message Box Title
+            p Test...
 
         include foot

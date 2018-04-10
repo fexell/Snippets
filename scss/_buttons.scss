@@ -84,4 +84,9 @@ a.lnkBtn {
     /* lnkBtn, normBtn animation 8 */
     @include btn-a-8;
   }
+  
+  &.animation-9 {
+    /* lnkBtn, normBtn animation 9 */
+    @include btn-a-9($td: 350ms, $bgc: #212121);
+  }
 }

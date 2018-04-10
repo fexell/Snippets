@@ -5,30 +5,49 @@
     <link rel="stylesheet" href="reset.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="site.css" type="text/css">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="inner-wrapper">
         <h1 style="text-align: center;">Home</h1>
-        <div class="lnkBtn-container">
-          <h2 style="text-align: center;">Buttons</h2><a class="lnkBtn small-caps animation-1" href="#cpb">.btn-lnk (1)</a><a class="lnkBtn small-caps animation-2" href="#cpb">.btn-lnk (2)</a><a class="lnkBtn small-caps animation-3" href="#cpb">.btn-lnk (3)</a><a class="lnkBtn small-caps animation-4" href="#cpb">.btn-lnk (4)</a><a class="lnkBtn small-caps animation-5" href="#cpb">.btn-lnk (5)</a><a class="lnkBtn small-caps animation-6" href="#cpb">.btn-lnk (6)</a><a class="lnkBtn small-caps animation-7" href="#cpb">.btn-lnk (7)</a><a class="lnkBtn small-caps animation-8" href="#cpb">.btn-lnk (8)</a>
-        </div>
-        <div class="menu">
+        <section class="lnkBtn-container" id="lnkBtn-section">
+          <h2 style="text-align: center;">Buttons</h2><a class="lnkBtn small-caps animation-1" href="#cpb">.btn-lnk (1)</a><a class="lnkBtn small-caps animation-2" href="#cpb">.btn-lnk (2)</a><a class="lnkBtn small-caps animation-3" href="#cpb">.btn-lnk (3)</a><a class="lnkBtn small-caps animation-4" href="#cpb">.btn-lnk (4)</a><a class="lnkBtn small-caps animation-5" href="#cpb">.btn-lnk (5)</a><a class="lnkBtn small-caps animation-6" href="#cpb">.btn-lnk (6)</a><a class="lnkBtn small-caps animation-7" href="#cpb">.btn-lnk (7)</a><a class="lnkBtn small-caps animation-8" href="#cpb">.btn-lnk (8)</a><a class="lnkBtn small-caps animation-9" href="#cpb">.btn-lnk (9)</a>
+        </section>
+        <section class="menu">
           <h2 style="text-align: center;">Menu</h2>
-          <ul class="menu-container">
+          <ul class="menu-container clearfix">
             <li><a class="small-caps animation-1" href="#">Item-1</a></li>
             <li><a class="small-caps animation-2" href="#">Item-2</a></li>
             <li><a class="small-caps animation-3" href="#">Item-3</a></li>
             <li><a class="small-caps animation-4" href="#">Item-4</a></li>
             <li><a class="small-caps animation-5" href="#">Item-5</a></li>
+            <li><a class="small-caps animation-6" href="#">Item-6</a></li>
           </ul>
-        </div>
+          <hr class="clearfix">
+          <div class="hamburger-buttons-container">
+            <button class="menu-toggle animation-1" onclick=";this.classList.toggle('toggled');"><span class="bars"></span></button>
+            <button class="menu-toggle animation-2" onclick=";this.classList.toggle('toggled');"><span class="bars"></span></button>
+            <button class="menu-toggle animation-3" onclick=";this.classList.toggle('toggled');"><span class="bars"></span></button>
+          </div>
+        </section>
+        <section class="messageBoxes">
+          <h2 style="text-align: center;">Message Boxes</h2><a href="#box-1">Box-1</a>
+        </section>
       </div>
       <div class="cpb-container" id="cpb"><a class="close-cpb" href="#">X</a>
         <div class="cpb-inner"></div>
       </div>
+      <div class="message-box" id="box-1" data-action="close" href="#close"><a class="close" href="#">X</a>
+        <div class="inner-container"><a class="close" href="#">X</a>
+          <h1>Message Box Title</h1>
+          <p>Test...</p>
+        </div>
+      </div>
       <footer>
       </footer>
+      <div class="fader"></div>
     </div>
   </body>
 </html>

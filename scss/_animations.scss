@@ -10,10 +10,18 @@
 //
 
 // btn animation 1
+
+$transitionDuration: 250ms !default;
+
+@mixin beforeAndAfterDefault {
+  content: '';
+  position: absolute;
+}
+
 @mixin btn-a-1 {
   &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     
@@ -22,7 +30,7 @@
     background-color: rgba(#FAFAFA, 0.2);
     
     transform: rotate(-45deg);
-    transition: right 250ms;
+    transition: right $transitionDuration;
   }
   &:hover::after {
     content: '';
@@ -33,8 +41,8 @@
 // btn animation 2
 @mixin btn-a-2 {
   &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     
@@ -42,7 +50,7 @@
     left: 0;
     
     background-color: rgba(#FAFAFA, 0.2);
-    transition: top 250ms;
+    transition: top $transitionDuration;
   }
   &:hover::after {
     content: '';
@@ -53,8 +61,8 @@
 // btn animation 3
 @mixin btn-a-3 {
   &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     
@@ -62,7 +70,7 @@
     left: 0;
     
     background-color: rgba(#FAFAFA, 0.2);
-    transition: bottom 250ms;
+    transition: bottom $transitionDuration;
   }
   &:hover::after {
     content: '';
@@ -71,14 +79,14 @@
 }
 
 // btn animation 4
-@mixin btn-a-4 {
+@mixin btn-a-4($bgc: #{$mainBlack}, $bgc-hover: #{$mainOrange}) {
   
-  &:hover { background-color: #212121; transition: all 250ms; }
+  &:hover { background-color: $bgc; transition: all $transitionDuration; }
   z-index: 1;
   
   &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 1%;
     height: 1%;
     
@@ -87,7 +95,7 @@
     
     background-color: transparent;
     transform: translate(-50%, -50%);
-    transition: width 250ms, height 250ms, background-color 250ms;
+    transition: width $transitionDuration, height $transitionDuration, background-color $transitionDuration;
     
     z-index: -1;
   }
@@ -97,23 +105,23 @@
     width: 100%;
     height: 101%;
     
-    background-color: #F57C00;
+    background-color: $bgc-hover;
   }
 }
 
 // btn animation 5
-@mixin btn-a-5 {
+@mixin btn-a-5($bgc: #{$mainOrange}, $bgc-hover: #{$mainOrange}) {
   
-  &:hover { background-color: #212121; transition: all 250ms; }
+  &:hover { background-color: $bgc-hover; transition: all $transitionDuration; }
   z-index: 1;
   
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 50%;
     height: 100%;
     top: 0;
-    background-color: #F57C00;
+    background-color: $bgc-hover;
     
     transition: all 500ms;
     
@@ -129,7 +137,7 @@
   }
   
   &:hover::before, &:hover::after {
-    transition: all 250ms;
+    transition: all $transitionDuration;
   }
   
   &:hover::before {
@@ -142,20 +150,20 @@
 }
 
 // btn animation 6
-@mixin btn-a-6 {
-  &:hover { background-color: #212121; transition: all 250ms; }
+@mixin btn-a-6($bgc: #{$mainOrange}, $bgc-hover: #{$mainBlack}) {
+  &:hover { background-color: $bgc-hover; transition: all $transitionDuration; }
   z-index: 1;
   
   &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     top: 0;
     left: -100%;
-    background-color: #F57C00;
+    background-color: $bgc;
     
-    transition: all 250ms;
+    transition: all $transitionDuration;
     
     z-index: -1;
   }
@@ -166,26 +174,26 @@
 }
 
 // btn animation 7
-@mixin btn-a-7 {
-  &:hover { background-color: #212121; transition: all 250ms; }
+@mixin btn-a-7($bgc: #{$mainOrange}, $bgc-hover: #{$mainBlack}) {
+  &:hover { background-color: $bgc-hover; transition: all $transitionDuration; }
   z-index: 1;
   
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     top: 0;
     left: -100%;
-    background-color: #F57C00;
+    background-color: $bgc;
     
-    transition: all 250ms;
-    transition-delay: 250ms;
+    transition: all $transitionDuration;
+    transition-delay: $transitionDuration;
     
     z-index: -2;
   }
   &::before {
-    background-color: lighten(#F57C00, 20%);
+    background-color: rgba(255, 255, 255, 0.2);
     
     transition-delay: 0ms;
     
@@ -196,7 +204,7 @@
     left: 0;
   }
   &:hover::before {
-    transition-delay: 250ms;
+    transition-delay: $transitionDuration;
   }
   &:hover::after {
     transition-delay: 0ms;
@@ -204,26 +212,26 @@
 }
 
 // btn animation 8
-@mixin btn-a-8 {
-  &:hover { background-color: #212121; transition: all 250ms; }
+@mixin btn-a-8($bgc: #{$mainOrange}, $bgc-hover: #{$mainBlack}) {
+  &:hover { background-color: $bgc-hover; transition: all $transitionDuration; }
   z-index: 1;
   
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
+    
     width: 100%;
     height: 100%;
     bottom: -100%;
     left: 0;
-    background-color: #F57C00;
+    background-color: $bgc;
     
-    transition: all 250ms;
-    transition-delay: 250ms;
+    transition: all $transitionDuration;
+    transition-delay: $transitionDuration;
     
     z-index: -2;
   }
   &::before {
-    background-color: lighten(#F57C00, 20%);
+    background-color: rgba(255, 255, 255, 0.2);
     
     transition-delay: 0ms;
     
@@ -234,10 +242,43 @@
     bottom: 0;
   }
   &:hover::before {
-    transition-delay: 250ms;
+    transition-delay: $transitionDuration;
   }
   &:hover::after {
     transition-delay: 0ms;
+  }
+}
+
+// btn animation 8
+@mixin btn-a-9($bgc: #{$mainOrange}, $color: #{$mainBlack}, $color-hover: #{$mainWhite}, $bw: 1px, $td: $transitionDuration) {
+  & { border-width: $bw; border-color: $bgc; color: $color; background-color: transparent; z-index: 1; }
+  &:hover { color: $color-hover;transition: all $transitionDuration; }
+  
+  &::before {
+    @include beforeAndAfterDefault;
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $bgc;
+    
+    transform: translate3d(0, 105%, 0);
+    transition: all $td, color ($td / 2);
+    
+    z-index: -2;
+  }
+  &::before {
+    background-color: $bgc;
+    z-index: -1;
+  }
+  &:hover::before {
+    content: '';
+    transform: translateZ(0);
+  }
+  
+  &, &:hover, &::before {
+    transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
   }
 }
 
@@ -248,8 +289,7 @@
 // menu animaiton 1
 @mixin menu-a-1 {
   &::before {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
     
     left: 0;
     bottom: 0;
@@ -259,20 +299,19 @@
     
     background-color: transparent;
     
-    transition: background-color 250ms 250ms, width 250ms 0ms;
+    transition: background-color $transitionDuration $transitionDuration, width $transitionDuration 0ms;
   }
   &:hover::before {
     width: 100%;
     background-color: #{$mainOrange};
     
-    transition: background-color 250ms 0ms, width 250ms 250ms;
+    transition: background-color $transitionDuration 0ms, width $transitionDuration $transitionDuration;
   }
 }
 
 @mixin menu-a-2 {
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
     
     left: 0;
     bottom: 0;
@@ -282,21 +321,20 @@
     
     background-color: transparent;
     
-    transition: background-color 250ms 250ms, width 250ms 0ms;
+    transition: background-color $transitionDuration $transitionDuration, width $transitionDuration 0ms;
   }
   &::after { left: initial; right: 0; bottom: initial; top: 0; }
   &:hover::before, &:hover::after {
     width: 100%;
     background-color: #{$mainOrange};
     
-    transition: background-color 250ms 0ms, width 250ms 250ms;
+    transition: background-color $transitionDuration 0ms, width $transitionDuration $transitionDuration;
   }
 }
 
-@mixin menu-a-3 {
+@mixin menu-a-3($fill: #{$mainOrange}) {
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
     
     width: 0%;
     height: 2px;
@@ -309,7 +347,7 @@
     border-right: 2px solid transparent;
     bottom: 0;
     left: 0;
-    transition: height 250ms, width 250ms 350ms, border-right-color 250ms 500ms, border-bottom-color 250ms 750ms;
+    transition: height $transitionDuration, width $transitionDuration 350ms, border-right-color $transitionDuration 500ms, border-bottom-color $transitionDuration 750ms;
     transition-direction: reverse;
     z-index: 0;
   }
@@ -319,7 +357,7 @@
     border-left: 2px solid transparent;
     top: 0;
     right: 0;
-    transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+    transition: height $transitionDuration, width $transitionDuration 350ms, border-top-color $transitionDuration 500ms, border-left-color $transitionDuration 750ms;
     transition-direction: reverse;
     z-index: 2;
   }
@@ -328,12 +366,12 @@
     
     width: 100%;
     height: 100%;
-    transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+    transition: width $transitionDuration $transitionDuration, height $transitionDuration 501ms, border-bottom-color $transitionDuration, border-right-color $transitionDuration;
     transition-direction: normal;
     
     border: {
-      bottom-color: #{$mainOrange};
-      right-color: #{$mainOrange};
+      bottom-color: $fill;
+      right-color: $fill;
     }
   }
   &:hover::after {
@@ -341,20 +379,19 @@
     
     width: 100%;
     height: 100%;
-    transition: width 250ms 250ms, height 250ms 501ms, border-left-color 250ms, border-top-color 250ms;
+    transition: width $transitionDuration $transitionDuration, height $transitionDuration 501ms, border-left-color $transitionDuration, border-top-color $transitionDuration;
     transition-direction: normal;
     
     border: {
-      top-color: #{$mainOrange};
-      left-color: #{$mainOrange};
+      top-color: $fill;
+      left-color: $fill;
     }
   }
 }
 
-@mixin menu-a-4 {
+@mixin menu-a-4($fill: #{$mainOrange}, $delay: 250) {
   &::before, &::after {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
     
     width: 0%;
     height: 2px;
@@ -367,7 +404,7 @@
     border-right: 2px solid transparent;
     bottom: 0;
     left: 0;
-    transition: height 250ms 750ms, width 250ms 1000ms, border-right-color 250ms 1250ms, border-bottom-color 250ms 1500ms;
+    transition: height $transitionDuration ($delay * 3) + ms, width $transitionDuration ($delay * 4) + ms, border-right-color $transitionDuration ($delay * 5) + ms, border-bottom-color $transitionDuration ($delay * 6) + ms;
     transition-direction: reverse;
     z-index: 0;
   }
@@ -377,7 +414,7 @@
     border-left: 2px solid transparent;
     top: 0;
     right: 0;
-    transition: height 250ms, width 250ms 350ms, border-top-color 250ms 500ms, border-left-color 250ms 750ms;
+    transition: height $transitionDuration, width $transitionDuration ($delay + ($delay * 0.4)) + ms, border-top-color $transitionDuration ($delay * 2) + ms, border-left-color $transitionDuration ($delay * 3) + ms;
     transition-direction: reverse;
     z-index: 2;
   }
@@ -386,12 +423,12 @@
     
     width: 100%;
     height: 100%;
-    transition: width 250ms 250ms, height 250ms 501ms, border-bottom-color 250ms, border-right-color 250ms;
+    transition: width $transitionDuration $transitionDuration, height $transitionDuration ($delay * 2) + ms, border-bottom-color $transitionDuration, border-right-color $transitionDuration;
     transition-direction: normal;
     
     border: {
-      bottom-color: #{$mainOrange};
-      right-color: #{$mainOrange};
+      bottom-color: $fill;
+      right-color: $fill;
     }
   }
   &:hover::after {
@@ -399,17 +436,17 @@
     
     width: 100%;
     height: 100%;
-    transition: width 250ms 750ms, height 250ms 1001ms, border-left-color 250ms 750ms, border-top-color 250ms 750ms;
+    transition: width $transitionDuration ($delay * 3) + ms, height $transitionDuration ($delay * 4) + ms, border-left-color $transitionDuration ($delay * 3) + ms, border-top-color $transitionDuration ($delay * 3) + ms;
     transition-direction: normal;
     
     border: {
-      top-color: #{$mainOrange};
-      left-color: #{$mainOrange};
+      top-color: $fill;
+      left-color: $fill;
     }
   }
 }
 
-@mixin menu-a-5 {
+@mixin menu-a-5($bgc: #{$mainOrange}) {
   
   z-index: 0;
   
@@ -418,8 +455,7 @@
   }
   
   &::before {
-    content: '';
-    position: absolute;
+    @include beforeAndAfterDefault;
     
     top: 0;
     left: 0;
@@ -428,7 +464,7 @@
     height: 100%;
     
     background-color: transparent;
-    transition: background-color 250ms 250ms, width 250ms 0ms;
+    transition: background-color $transitionDuration $transitionDuration, width 250ms 0ms;
     z-index: -1;
   }
   
@@ -437,8 +473,30 @@
     position: absolute;
     
     width: 100%;
-    background-color: #{$mainOrange};
+    background-color: $bgc;
     
-    transition: background-color 250ms 0ms, width 250ms 250ms;
+    transition: background-color $transitionDuration 0ms, width $transitionDuration 250ms;
+  }
+}
+
+@mixin menu-a-6($bgc: #{$mainOrange}) {
+  &::before {
+    @include beforeAndAfterDefault;
+    
+    bottom: 0;
+    left: -100%;
+    
+    width: 40%;
+    height: 2px;
+    
+    background-color: $bgc;
+    
+    transition: left 500ms;
+    transform: translateX(-50%);
+  }
+  
+  &:hover::before {
+    content: '';
+    left: 50%;
   }
 }
