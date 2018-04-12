@@ -13,7 +13,7 @@
   width: 100%;
   height: 100vh;
   
-  background: rgba(#212121, 0.8);
+  background: rgba(#212121, 0.9);
   
   transition: display 0ms, opacity 500ms;
   
@@ -28,7 +28,9 @@
       left: 0;
       right: 0;
       
-      width: 40vw;
+      min-width: 500px;
+      max-width: 40vw;
+      width: 100%;
       padding: 20px 40px;
       
       margin: {
@@ -64,6 +66,39 @@
         color: #212121;
       }
     }
+  
+  &.danger {
+    &> .inner-container {
+      color: #FFF;
+      background-color: #EC644B;
+      
+      & h1, h2, h3, h4, h5, h6 {
+        color: #FFF;
+      }
+    }
+  }
+  
+  &.warning {
+    &> .inner-container {
+      color: #FFF;
+      background-color: #F5D76E;
+      
+      & h1, h2, h3, h4, h5, h6 {
+        color: #FFF;
+      }
+    }
+  }
+  
+  &.success {
+    &> .inner-container {
+      color: #FFF;
+      background-color: #87D37C;
+      
+      & h1, h2, h3, h4, h5, h6 {
+        color: #FFF;
+      }
+    }
+  }
   
   &.style-1 {
     &> .inner-container {

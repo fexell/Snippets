@@ -13,7 +13,7 @@
       <div class="inner-wrapper">
         <h1 style="text-align: center;">Home</h1>
         <section class="lnkBtn-container" id="lnkBtn-section">
-          <h2 style="text-align: center;">Buttons</h2><a class="lnkBtn small-caps animation-1" href="#cpb">.btn-lnk (1)</a><a class="lnkBtn small-caps animation-2" href="#cpb">.btn-lnk (2)</a><a class="lnkBtn small-caps animation-3" href="#cpb">.btn-lnk (3)</a><a class="lnkBtn small-caps animation-4" href="#cpb">.btn-lnk (4)</a><a class="lnkBtn small-caps animation-5" href="#cpb">.btn-lnk (5)</a><a class="lnkBtn small-caps animation-6" href="#cpb">.btn-lnk (6)</a><a class="lnkBtn small-caps animation-7" href="#cpb">.btn-lnk (7)</a><a class="lnkBtn small-caps animation-8" href="#cpb">.btn-lnk (8)</a><a class="lnkBtn small-caps animation-9" href="#cpb">.btn-lnk (9)</a>
+          <h2 style="text-align: center;">Buttons</h2><a class="lnkBtn small-caps animation-1" href="#cpb">.btn-lnk (1)</a><a class="lnkBtn small-caps animation-2" href="#cpb">.btn-lnk (2)</a><a class="lnkBtn small-caps animation-3" href="#cpb">.btn-lnk (3)</a><a class="lnkBtn small-caps animation-4" href="#cpb">.btn-lnk (4)</a><a class="lnkBtn small-caps animation-5" href="#cpb">.btn-lnk (5)</a><a class="lnkBtn small-caps animation-6" href="#cpb">.btn-lnk (6)</a><a class="lnkBtn small-caps animation-7" href="#cpb">.btn-lnk (7)</a><a class="lnkBtn small-caps animation-8" href="#cpb">.btn-lnk (8)</a><a class="lnkBtn small-caps animation-9" href="#cpb">.btn-lnk (9)</a><a class="lnkBtn small-caps animation-10" href="#cpb">.btn-lnk (10)</a>
         </section>
         <section class="menu">
           <h2 style="text-align: center;">Menu</h2>
@@ -33,14 +33,14 @@
           </div>
         </section>
         <section class="messageBoxes">
-          <h2 style="text-align: center;">Message Boxes</h2><a href="#box-1">Box-1</a>
+          <h2 style="text-align: center;">Message Boxes</h2><a href="#box-1">Box-1</a><a class="danger" href="#box-1" onclick="$('.message-box').addClass('danger');">Box-1.danger</a><a class="warning" href="#box-1" onclick="$('.message-box').addClass('warning');">Box-1.warning</a><a class="success" href="#box-1" onclick="$('.message-box').addClass('success');">Box-1.success</a>
         </section>
       </div>
       <div class="cpb-container" id="cpb"><a class="close-cpb" href="#">X</a>
         <div class="cpb-inner"></div>
       </div>
-      <div class="message-box" id="box-1" data-action="close" href="#close"><a class="close" href="#">X</a>
-        <div class="inner-container"><a class="close" href="#">X</a>
+      <div class="message-box" id="box-1" data-action="close" href="#close"><a class="close" href="#" onclick="$('.message-box').removeClass('danger warning success');">X</a>
+        <div class="inner-container"><a class="close" href="#" onclick="$('.message-box').removeClass('danger warning success');">X</a>
           <h1>Message Box Title</h1>
           <p>Test...</p>
         </div>

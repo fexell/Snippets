@@ -249,7 +249,7 @@ $transitionDuration: 250ms !default;
   }
 }
 
-// btn animation 8
+// btn animation 9
 @mixin btn-a-9($bgc: #{$mainOrange}, $color: #{$mainBlack}, $color-hover: #{$mainWhite}, $bw: 1px, $td: $transitionDuration) {
   & { border-width: $bw; border-color: $bgc; color: $color; background-color: transparent; z-index: 1; }
   &:hover { color: $color-hover;transition: all $transitionDuration; }
@@ -280,6 +280,36 @@ $transitionDuration: 250ms !default;
   &, &:hover, &::before {
     transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
   }
+}
+
+@mixin btn-a-10($mainColor: #{$mainOrange}, $position: bottom, $duration: 350) {
+  & { color: #333; background-color: transparent; border: none; }
+  &:hover, &::before, &::after, &:hover::before, &:hover::after {
+    transition: width $duration + ms, background-color $duration + ms, color $duration + ms;
+  }
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    #{$position}: 0;
+    background-color: $mainColor;
+  }
+  
+  &::before {
+    left: 0;
+  }
+  
+  &::after {
+    right: 0;
+  }
+  
+  &:hover::before, &:hover::after {
+    content: '';
+    width: 100%;
+  }
+  
 }
 
 //

@@ -66,6 +66,18 @@ main.inner-wrapper {
   background-color: #F57C00;
 }
 
+blockquote.danger, blockquote.red, li.danger, li.red, p.danger, p.red, pre.danger, pre.red, a.danger, a.red, abbr.danger, abbr.red, b.danger, b.red, cite.danger, cite.red, code.danger, code.red, em.danger, em.red, i.danger, i.red, q.danger, q.red, s.danger, s.red, small.danger, small.red, span.danger, span.red, strong.danger, strong.red, sub.danger, sub.red, sup.danger, sup.red, var.danger, var.red, u.danger, u.red {
+  color: #EC644B;
+}
+
+blockquote.warning, blockquote.yellow, li.warning, li.yellow, p.warning, p.yellow, pre.warning, pre.yellow, a.warning, a.yellow, abbr.warning, abbr.yellow, b.warning, b.yellow, cite.warning, cite.yellow, code.warning, code.yellow, em.warning, em.yellow, i.warning, i.yellow, q.warning, q.yellow, s.warning, s.yellow, small.warning, small.yellow, span.warning, span.yellow, strong.warning, strong.yellow, sub.warning, sub.yellow, sup.warning, sup.yellow, var.warning, var.yellow, u.warning, u.yellow {
+  color: #F5D76E;
+}
+
+blockquote.success, blockquote.green, li.success, li.green, p.success, p.green, pre.success, pre.green, a.success, a.green, abbr.success, abbr.green, b.success, b.green, cite.success, cite.green, code.success, code.green, em.success, em.green, i.success, i.green, q.success, q.green, s.success, s.green, small.success, small.green, span.success, span.green, strong.success, strong.green, sub.success, sub.green, sup.success, sup.green, var.success, var.green, u.success, u.green {
+  color: #87D37C;
+}
+
 /* 1) lnkBtn, normBtn */
 button.normBtn,
 a.lnkBtn {
@@ -538,6 +550,52 @@ a.lnkBtn.animation-9::before {
   -webkit-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
   -o-transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
   transition-timing-function: cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+button.normBtn.animation-10,
+a.lnkBtn.animation-10 {
+  color: #333;
+  background-color: transparent;
+  border: none;
+}
+
+button.normBtn.animation-10:hover, button.normBtn.animation-10::before, button.normBtn.animation-10::after, button.normBtn.animation-10:hover::before, button.normBtn.animation-10:hover::after,
+a.lnkBtn.animation-10:hover,
+a.lnkBtn.animation-10::before,
+a.lnkBtn.animation-10::after,
+a.lnkBtn.animation-10:hover::before,
+a.lnkBtn.animation-10:hover::after {
+  -webkit-transition: width 350ms, background-color 350ms, color 350ms;
+  -o-transition: width 350ms, background-color 350ms, color 350ms;
+  transition: width 350ms, background-color 350ms, color 350ms;
+}
+
+button.normBtn.animation-10::before, button.normBtn.animation-10::after,
+a.lnkBtn.animation-10::before,
+a.lnkBtn.animation-10::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: #F57C00;
+}
+
+button.normBtn.animation-10::before,
+a.lnkBtn.animation-10::before {
+  left: 0;
+}
+
+button.normBtn.animation-10::after,
+a.lnkBtn.animation-10::after {
+  right: 0;
+}
+
+button.normBtn.animation-10:hover::before, button.normBtn.animation-10:hover::after,
+a.lnkBtn.animation-10:hover::before,
+a.lnkBtn.animation-10:hover::after {
+  content: '';
+  width: 100%;
 }
 
 ul.menu-container {
@@ -1055,7 +1113,7 @@ button.menu-toggle > span.bars::after {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(33, 33, 33, 0.8);
+  background: rgba(33, 33, 33, 0.9);
   -webkit-transition: display 0ms, opacity 500ms;
   -o-transition: display 0ms, opacity 500ms;
   transition: display 0ms, opacity 500ms;
@@ -1068,7 +1126,9 @@ button.menu-toggle > span.bars::after {
   top: 50%;
   left: 0;
   right: 0;
-  width: 40vw;
+  min-width: 500px;
+  max-width: 40vw;
+  width: 100%;
   padding: 20px 40px;
   margin-left: auto;
   margin-right: auto;
@@ -1096,6 +1156,33 @@ button.menu-toggle > span.bars::after {
   font-size: 1.5rem;
   text-decoration: none;
   color: #212121;
+}
+
+.message-box.danger > .inner-container {
+  color: #FFF;
+  background-color: #EC644B;
+}
+
+.message-box.danger > .inner-container h1, .message-box.danger > .inner-container h2, .message-box.danger > .inner-container h3, .message-box.danger > .inner-container h4, .message-box.danger > .inner-container h5, .message-box.danger > .inner-container h6 {
+  color: #FFF;
+}
+
+.message-box.warning > .inner-container {
+  color: #FFF;
+  background-color: #F5D76E;
+}
+
+.message-box.warning > .inner-container h1, .message-box.warning > .inner-container h2, .message-box.warning > .inner-container h3, .message-box.warning > .inner-container h4, .message-box.warning > .inner-container h5, .message-box.warning > .inner-container h6 {
+  color: #FFF;
+}
+
+.message-box.success > .inner-container {
+  color: #FFF;
+  background-color: #87D37C;
+}
+
+.message-box.success > .inner-container h1, .message-box.success > .inner-container h2, .message-box.success > .inner-container h3, .message-box.success > .inner-container h4, .message-box.success > .inner-container h5, .message-box.success > .inner-container h6 {
+  color: #FFF;
 }
 
 .message-box.style-1 > .inner-container {

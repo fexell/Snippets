@@ -78,3 +78,17 @@ main.inner-wrapper {
     background-color: #{$mainOrange};
   }
 }
+
+#{$textElements} {
+  &.danger, &.red {
+    color: #{$dangerRed};
+  }
+  
+  &.warning, &.yellow {
+    color: #{$warningYellow};
+  }
+  
+  &.success, &.green {
+    color: #{$successGreen};
+  }
+}

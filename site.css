@@ -32,6 +32,10 @@ body {
   box-shadow: 0 10px 10px -8px #9E9E9E;
 }
 
+section.messageBoxes a {
+  margin-right: 20px;
+}
+
 .cpb-container {
   position: fixed;
   overflow: visible;

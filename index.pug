@@ -22,6 +22,7 @@ html
             a.lnkBtn.small-caps.animation-7(href="#cpb") .btn-lnk (7)
             a.lnkBtn.small-caps.animation-8(href="#cpb") .btn-lnk (8)
             a.lnkBtn.small-caps.animation-9(href="#cpb") .btn-lnk (9)
+            a.lnkBtn.small-caps.animation-10(href="#cpb") .btn-lnk (10)
             
           section.menu
             +blockTitle("Menu")
@@ -52,6 +53,9 @@ html
           section.messageBoxes
             +blockTitle("Message Boxes")
             a(href="#box-1") Box-1
+            a.danger(href="#box-1" onclick="$('.message-box').addClass('danger');") Box-1.danger
+            a.warning(href="#box-1" onclick="$('.message-box').addClass('warning');") Box-1.warning
+            a.success(href="#box-1" onclick="$('.message-box').addClass('success');") Box-1.success
                 
 
         .cpb-container#cpb
@@ -59,9 +63,9 @@ html
           .cpb-inner
           
         .message-box#box-1(data-action="close" href="#close")
-          a(href="#").close X
+          a(href="#" onclick="$('.message-box').removeClass('danger warning success');").close X
           .inner-container
-            a(href="#").close X
+            a(href="#" onclick="$('.message-box').removeClass('danger warning success');").close X
             h1 Message Box Title
             p Test...
 
